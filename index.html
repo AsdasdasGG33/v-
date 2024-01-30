@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: rgb(255, 120, 225);
+        background: linear-gradient(
+          84deg,
+          rgba(255, 120, 225, 1) 0%,
+          rgba(255, 0, 198, 0.7737219887955182) 55%,
+          rgba(255, 0, 198, 0.832545518207283) 100%
+        );
+      }
+      .kepKi {
+        display: none;
+      }
+      .kepBe {
+        display: inline;
+      }
+
+      div {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: white;
+        margin: auto;
+        width: 80%;
+        text-align: center;
+      }
+      img {
+        border-radius: 20px;
+      }
+      button {
+        border: 2px solid white;
+        background-color: #ff008a;
+        width: 90px;
+        height: 40px;
+        border-radius: 10px;
+        margin: 10px;
+        box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.671);
+      }
+      button:hover{
+        transition: .2s;
+        box-shadow: 7px 3px 3px rgba(0, 0, 0, 0.671);
+        background-color: #ff0088bd;
+      }
+      .igenKepBe{
+        display: block;
+      }
+      .szovegNem{
+        display: none;
+      }
+    </style>
+
+    <script>
+      function igenKepBe(){
+        const igenKep = document.getElementById('igenKep');
+        const igenSzoveg = document.getElementById('igen');
+        const kerdesKep = document.getElementById('kerdesKep');
+        const nemKep = document.getElementById('nemKep');
+        const nemSzoveg = document.getElementById('nem');
+        igenKep.classList.replace('kepKi', 'kepBe');
+        igenSzoveg.classList.replace('szovegNem', 'szovegMutat');
+        kerdesKep.classList.replace('kepBe', 'kepKi');
+        nemKep.classList.replace('kepBe', 'kepKi');
+        nemSzoveg.classList.replace('szovegMutat', 'szovegNem');
+      }
+      function nemKepBe(){
+        const nemKep = document.getElementById('nemKep');
+        const nemSzoveg = document.getElementById('nem');
+        const igenKep = document.getElementById('igenKep');
+        const igenSzoveg = document.getElementById('igen');
+        const kerdesKep = document.getElementById('kerdesKep');
+        nemKep.classList.replace('kepKi', 'kepBe');
+        nemSzoveg.classList.replace('szovegNem', 'szovegMutat');
+        kerdesKep.classList.replace('kepBe', 'kepKi');
+        igenKep.classList.replace('kepBe', 'kepKi');
+        igenSzoveg.classList.replace('szovegMutat', 'szovegNem');
+      }
+      
+    </script>
+  </head>
+  <body>
+    <div class="cont">
+      <h2 class="szovegMutat">Leszel a valentínom bab?</h2>
+      <h2 class="szovegNem" id="igen">JOOOOOOOOOOOOOO❤❤❤</h2>
+      <h2 class="szovegNem" id="nem">ÁJJÁ LE</h2>
+      <img src="nemKep.jpg" alt="" class="kepKi" id="nemKep"/>
+      <img src="igenKep.jpg" alt="" class="kepKi" id="igenKep"/>
+      <img src="kerdesKep.jpg" alt="kerdesKep" class="kepBe" id="kerdesKep"/>
+      <br />
+      <button onclick="igenKepBe()" id="gomb">Igen</button>
+      <button onclick="nemKepBe()" id="gomb">Nem</button>
+    </div>
+  </body>
+</html>
